@@ -6,9 +6,9 @@ RUN apt-get update
 RUN apt-get install wget libcurl3 libcurl3-gnutls -y
 
 # Install game from warsow.net
-RUN wget --progress=dot:giga -O warsow_1.51_unified.tar.gz http://www.warsow.net/download?dl=warsow151
+RUN wget --no-verbose -O warsow_1.51_unified.tar.gz http://www.warsow.net/download?dl=warsow151
 
-RUN tar zxvf warsow_1.51_unified.tar.gz -C /opt/
+RUN tar zxf warsow_1.51_unified.tar.gz -C /opt/
 RUN chmod +x /opt/warsow_15/wsw_server*
 
 # Setup user
